@@ -1,0 +1,638 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ //*= require_tree .
+ //*= require_self
+ */
+@import 'bootstrap';
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900);
+//* {
+//  font-family: Roboto, sans-serif;
+//}
+
+
+
+
+.login-holder, .holder {
+  padding: 100px 0;
+  background: #f6f5f7;
+  .login, .signup, .forget-password-holder {
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    .sign-in {
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      color: #000;
+      text-transform: capitalize;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+    #new_user {
+      background-color: #FFFFFF;
+      padding: 50px;
+      flex-basis: 50%;
+    }
+    #user_password, #user_password_confirmation {
+      box-shadow: 0 5px 8px -1px rgba(0,0,0,0.2);
+      background-color: #eee;
+      border: none;
+      padding: 12px 15px;
+      margin: 8px 0;
+      width: 100%;
+      outline: 0;
+    }
+    .forget-holder {
+      display: flex;
+      align-items: center;
+    }
+    .forget-label {
+      font-family: 'Roboto', sans serif;
+      font-size: 13px;
+      margin-left: 5px;
+    }
+    .login-btn {
+      border-radius: 20px;
+      border: 1px solid #000;
+      background-color: #000;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 45px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: transform 80ms ease-in;
+      margin-top: 25px;
+      text-decoration: none;
+      &:hover {
+        background: transparent;
+        color: #000;
+      }
+    }
+    .forget-password {
+      font-family: 'Roboto', sans-serif;
+      color: #333;
+      font-size: 14px;
+      text-decoration: none;
+      margin: 15px 0 0;
+      display: block;
+    }
+    .signup-btn {
+      border-radius: 20px;
+      border: 1px solid #FFF;
+      background-color: transparent;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 45px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: transform 80ms ease-in;
+      text-decoration: none;
+      &:hover {
+        background: #fff;
+        color: #000;
+      }
+    }
+    .login-info {
+      background-image: linear-gradient(to right, #06a5a8, #0ee2ed);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-basis: 50%;
+      .info-header {
+        font-family: 'Roboto';
+        font-weight: bold;
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+      .info-text {
+        font-family: 'Roboto';
+        font-weight: normal;
+        color: #fff;
+        font-size: 15px;
+        max-width: 250px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+#error_explanation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  h2 {
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: normal;
+    text-align: left;
+  }
+  ul {
+    padding: 0;
+    .errors {
+      list-style-type: none;
+      font-family: 'Roboto';
+      font-weight: normal;
+      font-size: 15px;
+      color: red;
+      text-align: left;
+    }
+  }
+}
+#user_email {
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  outline: 0;
+  box-shadow: 0 5px 8px -1px rgba(0,0,0,0.2);
+  background-color: #eee;
+}
+.holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  background: #f6f5f7;
+  .forget-password-holder {
+    #new_user {
+      padding: 0;
+    }
+    .login-btn {
+      margin-top: 15px;
+    }
+    .forget-password {
+      padding: 60px;
+      background-color: #fff;
+      flex-basis: 50%;
+      margin: 0;
+      .forget-heading {
+        font-family: 'Roboto';
+        font-weight: bold;
+        color: #000;
+        text-transform: capitalize;
+        font-size: 2.5em;
+        margin-bottom: 30px;
+      }
+      .login-info {
+        flex-basis: 50%;
+      }
+    }
+    .info-header {
+      margin-bottom: 40px !important;
+    }
+  }
+}
+
+.login-holder, .holder {
+  padding: 100px 0;
+  background: #f6f5f7;
+  .login, .signup, .forget-password-holder {
+    display: flex;
+    justify-content: center;
+    padding: 0 50px;
+    height: 100%;
+    text-align: center;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    .sign-in {
+      font-family: 'Roboto';
+      font-weight: bold;
+      color: #000;
+      text-transform: capitalize;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+    }
+    #new_user {
+      background-color: #FFFFFF;
+      padding: 50px;
+      flex-basis: 50%;
+    }
+    #user_password, #user_password_confirmation {
+      box-shadow: 0 5px 8px -1px rgba(0,0,0,0.2);
+      background-color: #eee;
+      border: none;
+      padding: 12px 15px;
+      margin: 8px 0;
+      width: 100%;
+      outline: 0;
+    }
+    .forget-holder {
+      display: flex;
+      align-items: center;
+    }
+    .forget-label {
+      font-family: 'Roboto';
+      font-size: 13px;
+      margin-left: 5px;
+    }
+    .login-btn {
+      border-radius: 20px;
+      border: 1px solid #000;
+      background-color: #000;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 45px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: transform 80ms ease-in;
+      margin-top: 25px;
+      text-decoration: none;
+      &:hover {
+        background: transparent;
+        color: #000;
+      }
+    }
+    .forget-password {
+      font-family: 'Roboto';
+      color: #333;
+      font-size: 14px;
+      text-decoration: none;
+      margin: 15px 0 0;
+      display: block;
+    }
+    .signup-btn {
+      border-radius: 20px;
+      border: 1px solid #FFF;
+      background-color: transparent;
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 45px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: transform 80ms ease-in;
+      text-decoration: none;
+      &:hover {
+        background: #fff;
+        color: #000;
+      }
+    }
+    .login-info {
+      background-image: linear-gradient(to right, #06a5a8, #0ee2ed);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-basis: 50%;
+      .info-header {
+        font-family: 'Roboto';
+        font-weight: bold;
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 2.5em;
+        margin-bottom: 20px;
+      }
+      .info-text {
+        font-family: 'Roboto';
+        font-weight: normal;
+        color: #fff;
+        font-size: 15px;
+        max-width: 250px;
+        margin-bottom: 35px;
+      }
+    }
+  }
+}
+#error_explanation {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  h2 {
+    font-family: 'Roboto';
+    font-size: 20px;
+    font-weight: normal;
+    text-align: left;
+  }
+  ul {
+    padding: 0;
+    .errors {
+      list-style-type: none;
+      font-family: 'Roboto';
+      font-weight: normal;
+      font-size: 15px;
+      color: red;
+      text-align: left;
+    }
+  }
+}
+#user_email {
+  border: none;
+  padding: 12px 15px;
+  margin: 8px 0;
+  width: 100%;
+  outline: 0;
+  box-shadow: 0 5px 8px -1px rgba(0,0,0,0.2);
+  background-color: #eee;
+}
+.holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  background: #f6f5f7;
+  .forget-password-holder {
+    #new_user {
+      padding: 0;
+    }
+    .login-btn {
+      margin-top: 15px;
+    }
+    .forget-password {
+      padding: 60px;
+      background-color: #fff;
+      flex-basis: 50%;
+      margin: 0;
+      .forget-heading {
+        font-family: 'Roboto';
+        font-weight: bold;
+        color: #000;
+        text-transform: capitalize;
+        font-size: 2.5em;
+        margin-bottom: 30px;
+      }
+      .login-info {
+        flex-basis: 50%;
+      }
+    }
+    .info-header {
+      margin-bottom: 40px !important;
+    }
+  }
+}
+.profile-content {
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(1,111,185,1) 0%, rgba(0,185,236,1) 100%, rgba(0,212,255,1) 100%);
+}
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #151728;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+.profile-bg {
+  position: relative;
+  height: 40vh;
+  min-height: 250px;
+  max-height: 350px;
+  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 14px;
+  .name-holder {
+    position: absolute;
+    align-items: center;
+    display: flex;
+    z-index: 1;
+    bottom: 16px;
+    left: 24px;
+    .profile-name {
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      text-transform: capitalize;
+      font-size: 50px;
+      letter-spacing: 2px;
+    }
+  }
+}
+.profile-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 14px;
+}
+#profile-card-holder {
+  border: 0;
+  padding: 0;
+  margin-bottom: 20px;
+  border-radius: 14px;
+}
+#about_me {
+  background: rgba( 255, 255, 255, 0.12 );
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+  0px 8px 13px rgba(0,0,0,0.1),
+  0px 18px 23px rgba(0,0,0,0.1);
+  backdrop-filter: blur( 4px );
+  border: 1px solid rgba( 0, 0, 0, 0.18 );
+  border-radius: 14px;
+  padding: 20px;
+  width: 54%;
+  margin: 0 0 20px 20px;
+  .card-text {
+    color: #fff;
+  }
+  #column {
+    font-size: unset;
+  }
+  h1,h1,h3,h4,h5 {
+    color: #fff;
+    font-weight: 600;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 2px;
+  }
+}
+#services_holder, #update_status {
+  background: rgba( 255, 255, 255, 0.12 );
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+  backdrop-filter: blur( 4px );
+  border: 1px solid rgba( 0, 0, 0, 0.18 );
+  border-radius: 14px;
+  width: 27%;
+  margin: 0 0 20px;
+  padding: 20px;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+  0px 8px 13px rgba(0,0,0,0.1),
+  0px 18px 23px rgba(0,0,0,0.1);
+  .card-text {
+    color: #fff;
+  }
+  h1 {
+    color: #fff;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 8px 13px rgba(0,0,0,0.1),
+    0px 18px 23px rgba(0,0,0,0.1);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+
+  }
+}
+#update_status {
+  width: 46%;
+  margin: 0 0 20px 20px;
+}
+#delete {
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+  bottom: 10px;
+  .card-text {
+    color: #5c5e6e;
+    margin-bottom: 30px;
+  }
+  .delete-btn {
+    padding: 5px 8px;
+    background: white;
+    border-radius: 100%;
+    display: flex;
+    padding: 9px 10px;
+    .fa-trash {
+      color: red;
+      font-size: 25px;
+    }
+  }
+}
+
+#delete:hover {
+  box-shadow: whitesmoke;
+  transition: ease-in-out .5s;
+  opacity: .9;
+}
+
+
+#update_status {
+  h1 h2 h3 h4 h5 h6 {
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+
+
+  }
+  .btn {
+    background-color: #FF7F7F;
+    color: whitesmoke;
+    box-shadow: 8px 5px 5px black;
+    text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+    0px 6px 10px rgba(0,0,0,0.1),
+    0px 15px 20px rgba(0,0,0,0.1);
+    &:hover {
+      opacity: .9;
+      background-color: lightpink;
+      transition: ease-in-out .4s;
+    }
+  }
+}
+
+.post-submit-btn {
+  background-color: #FF7F7F;
+  color: #FF7F7F;
+  transition: ease-in .5s;
+}
+
+.post-submit-btn:hover {
+  background-color: whitesmoke;
+  transition: ease-out .5s;
+}
+
+
+
+.index-page {
+  background-color: #212121;
+  .index-body {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 100px 3px;
+  }
+  .index-padding {
+    height: 100%;
+    position: relative;
+    min-height: 200px;
+    width: 100%;
+    background-color: #141414;
+    min-width: 230px;
+    max-width: 315px;
+    padding: 0;
+    margin-bottom: 30px;
+    border-radius: 15px;
+    &:hover {
+      box-shadow: 1px 8px 20px grey;
+      transform: scale3d(1.006, 1.006, 1);
+    }
+    .bg-profile-index {
+      width: 100%;
+      vertical-align: top;
+      opacity: 0.2;
+      -webkit-filter: grayscale(100%) blur(10px);
+      filter: grayscale(100%) blur(10px);
+      -webkit-transition: all 2s ease;
+      transition: all 2s ease;
+      min-height: 350px;
+      max-height: 350px;
+    }
+  }
+}
+#border-card {
+  align-items: center;
+  background-color: transparent;
+  position: absolute;
+  padding: 0;
+  border: 0;
+  justify-content: center;
+  height: 100%;
+  span {
+    font-size: 0.6em;
+    color: #f39c12;
+    opacity: 0.75;
+  }
+  .card {
+    border: 0;
+    background: transparent;
+  }
+  .index-profile {
+    flex-direction: column;
+    .profile {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+    #name-style {
+      display: flex;
+      justify-content: center;
+    }
+    .card-title {
+      font-size: 1.3em;
+      color: #fff;
+      font-family: 'Roboto';
+      font-weight: 500;
+      text-transform: capitalize;
+      padding: 0;
+      margin-bottom: 5px;
+    }
+    #circle-image {
+      box-shadow: 3px 3px 20px rgba(0,0,0,0.5);
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      margin-left: 0;
+      width: 100px;
+      height: 100px;
+    }
+  }
+}
+
